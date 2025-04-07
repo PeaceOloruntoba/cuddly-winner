@@ -3,6 +3,7 @@ import { Toaster } from "sonner";
 import Spinner from "./components/shared/Spinner";
 import { Route, Routes } from "react-router";
 import RootLayout from "./layout/RootLayout";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
       >
         <Routes>
           <Route element={<RootLayout />}>
-            <Route path="/" />
+            <Route path="/" element={<Home />} />
           </Route>
         </Routes>
       </Suspense>
