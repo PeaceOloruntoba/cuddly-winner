@@ -7,9 +7,9 @@ import Foorter from "../components/ui/Foorter";
 export default function RootLayout() {
   return (
     <div className="w-screen h-screen flex flex-col root-layout">
-      <Header />
+      {/* <Header /> */}
       <Outlet />
-      <Foorter />
+      {/* <Foorter /> */}
     </div>
   );
 }
