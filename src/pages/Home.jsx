@@ -61,8 +61,8 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center">
             <button
-              className={`bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline ${
-                loading ? "opacity-50 cursor-not-allowed" : ""
+              className={`bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full ${
+                loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
               }`}
               type="submit"
               disabled={loading}
