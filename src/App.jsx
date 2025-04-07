@@ -23,7 +23,7 @@ export default function App() {
         <ScrollToTop />
         <Routes>
           <Route element={<RootLayout />}>
-            <Route path="/" element={<Home />} />
+            <Route path="" element={<Home />} />
           </Route>
           <Route element={<AdminLayout />}>
             <Route path="/admin" element={<Admin />} />
