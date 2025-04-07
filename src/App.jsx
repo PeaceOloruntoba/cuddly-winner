@@ -4,6 +4,7 @@ import Spinner from "./components/shared/Spinner";
 import { Route, Routes } from "react-router";
 import RootLayout from "./layout/RootLayout";
 import Home from "./pages/Home";
+import ScrollToTop from "./layout/ScrollToTop";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           </div>
         }
       >
+        <ScrollToTop />
         <Routes>
           <Route element={<RootLayout />}>
             <Route path="/" element={<Home />} />
