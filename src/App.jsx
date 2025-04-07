@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
 import { Toaster } from "sonner";
 import Spinner from "./components/shared/Spinner";
+import { Route, Routes } from "react-router";
+import RootLayout from "./layout/RootLayout";
 
 export default function App() {
   return (
@@ -12,7 +14,13 @@ export default function App() {
             <Spinner />
           </div>
         }
-      ></Suspense>
+      >
+        <Routes>
+          <Route element={<RootLayout />}>
+            <Route path="/" />
+          </Route>
+        </Routes>
+      </Suspense>
     </>
   );
 }
