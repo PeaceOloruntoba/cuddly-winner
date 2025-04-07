@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import axios from "axios";
+import axiosInstance from "../utils/axiosConfig";
 
-const API_BASE_URL = "http://localhost:5000/api";
 
 const useAdminStore = create((set, get) => ({
   token: null,
@@ -16,7 +16,7 @@ const useAdminStore = create((set, get) => ({
   fetchTestimonies: async () => {
     set({ loading: true, error: null });
     try {
-      const response = await axios.get(`${API_BASE_URL}/testimonies`, {
+      const response = await axiosInstance.get(`/testimonies`, {
         headers: {
           Authorization: `Bearer ${get().token}`,
         },
@@ -34,7 +34,7 @@ const useAdminStore = create((set, get) => ({
   submitTestimony: async (name, testimony) => {
     set({ loading: true, error: null });
     try {
-      const response = await axios.post(`${API_BASE_URL}/testimonies`, {
+      const response = await axiosInstance.post(`/testimonies`, {
         name,
         testimony,
       });
@@ -53,7 +53,7 @@ const useAdminStore = create((set, get) => ({
   loginAdmin: async (email, password) => {
     set({ loading: true, error: null });
     try {
-      const response = await axios.post(`${API_BASE_URL}/auth/login`, {
+      const response = await axiosInstance.post(`/auth/login`, {
         email,
         password,
       });
