@@ -1,0 +1,41 @@
+/* src/Watermark.css */
+.root-layout::before,
+.admin-layout::before {
+   content: "Testimony App";
+   /* Replace with your desired watermark text or image URL */
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(-45deg);
+   /* Adjust rotation as needed */
+   font-size: 6vw;
+   /* Adjust size */
+   font-weight: bold;
+   color: rgba(0, 0, 0, 0.1);
+   /* Adjust color and opacity */
+   z-index: -1;
+   /* Place behind other content */
+   pointer-events: none;
+   /* Prevent interaction */
+}
+
+.root-layout::before,
+.admin-layout::before {
+/* If you want to use an image watermark, uncomment and adjust this: */
+/*
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px; /* Adjust width */
+height: auto;
+background-image: url('/images/watermark.png');
+/* Replace with your image path in the public folder */
+background-repeat: no-repeat;
+background-size: contain;
+opacity: 0.2;
+/* Adjust opacity */
+z-index: -1;
+pointer-events: none;
+}
