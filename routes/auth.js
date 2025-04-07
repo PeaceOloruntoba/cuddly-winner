@@ -1,9 +1,10 @@
+// backend/routes/auth.js
 import express from "express";
 const router = express.Router();
-import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import Admin from "../models/Admin.js";
 
+// Admin Login
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
 
