@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router";
 import RootLayout from "./layout/RootLayout";
 import Home from "./pages/Home";
 import ScrollToTop from "./layout/ScrollToTop";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -22,6 +23,8 @@ export default function App() {
           <Route element={<RootLayout />}>
             <Route path="/" element={<Home />} />
           </Route>
+          <Route element={}></Route>
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Suspense>
     </>
